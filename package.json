@@ -1,0 +1,23 @@
+{
+  "name": "lavanderia",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/deizerizzatti/lavanderia.git"
+  },
+  "author": "Deize Rizzatti",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/deizerizzatti/lavanderia/issues"
+  },
+  "homepage": "https://github.com/deizerizzatti/lavanderia#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
