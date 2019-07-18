@@ -24,6 +24,7 @@ class itemController {
     const registro = await os.findByIdAndUpdate(req.params.id, req.body, {
       new: true
     });
+    
     if (registro) {
       return res.status(200).json(registro);
     } else {
