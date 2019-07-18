@@ -1,5 +1,5 @@
 const cliente = require("../models/cliente");
-
+//
 class ClienteController {
   async findAll(req, res) {
     const registros = await cliente.findAll();
