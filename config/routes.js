@@ -4,6 +4,8 @@ const routes = express.Router();
 const ClienteController = require("../app/controllers/cliente-controller");
 const ItemController = require("../app/controllers/item-controller");
 const OSController = require("../app/controllers/os-controller");
+const UsuarioController = require("../app/controllers/usuario-controller");
+const LoginController = require("../app/controllers/login-controller");
 
 routes.get("/clientes", ClienteController.findAll);
 routes.get("/clientes/:id", ClienteController.findById);
@@ -22,5 +24,13 @@ routes.get("/os/:id", OSController.findById);
 routes.post("/os", OSController.store);
 routes.put("/os/:id", OSController.update);
 routes.delete("/os/:id", OSController.delete);
+
+routes.get("/usuarios", UsuarioController.findAll);
+routes.post("/usuarios", UsuarioController.store);
+routes.post("/usuarios/validar", UsuarioController.usuarioValido);
+routes.put("/usuarios/:id", UsuarioController.update);
+routes.delete("/usuarios/:id", UsuarioController.delete);
+
+routes.post("/login", LoginController.fazerLogin);
 
 module.exports = routes;
