@@ -18,6 +18,6 @@ const osSchema = new Schema(
   { timestamps: true }
 );
 
-const os = mongoose.model("ordensServicos", clienteSchema);
+const os = mongoose.model("ordensServicos", osSchema);
 
 module.exports = os;

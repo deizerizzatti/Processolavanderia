@@ -9,6 +9,6 @@ const itemSchema = new Schema(
   { timestamps: true }
 );
 
-const item = mongoose.model("itens", clienteSchema);
+const item = mongoose.model("itens", itemSchema);
 
 module.exports = item;

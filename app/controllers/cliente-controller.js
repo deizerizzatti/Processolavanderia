@@ -1,15 +1,15 @@
 const cliente = require("../models/cliente");
-//
+
 class ClienteController {
   async findAll(req, res) {
-    const registros = await cliente.findAll();
+    const registros = await cliente.find();
     return res.status(200).json(registros);
   }
 
   async findById(req, res) {
-    const registro = await cliente.findById(req, params.id);
+    const registro = await cliente.findById(req.params.id);
     if (registro) {
-      return res.json(registro);
+      return res.status(200).json(registro);
     } else {
       return res.status(404).send("Not found");
     }

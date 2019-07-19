@@ -1,15 +1,15 @@
 const os = require("../models/os");
 
-class itemController {
+class osController {
   async findAll(req, res) {
-    const registros = await os.findAll();
+    const registros = await os.find();
     return res.status(200).json(registros);
   }
 
   async findById(req, res) {
-    const registro = await os.findById(req, params.id);
+    const registro = await os.findById(req.params.id);
     if (registro) {
-      return res.json(registro);
+      return res.status(200).json(registro);
     } else {
       return res.status(404).send("Not found");
     }
@@ -24,7 +24,7 @@ class itemController {
     const registro = await os.findByIdAndUpdate(req.params.id, req.body, {
       new: true
     });
-    
+
     if (registro) {
       return res.status(200).json(registro);
     } else {
@@ -42,4 +42,4 @@ class itemController {
   }
 }
 
-module.exports = new itemController();
+module.exports = new osController();

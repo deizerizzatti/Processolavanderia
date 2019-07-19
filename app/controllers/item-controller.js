@@ -2,14 +2,14 @@ const item = require("../models/item");
 
 class itemController {
   async findAll(req, res) {
-    const registros = await item.findAll();
+    const registros = await item.find();
     return res.status(200).json(registros);
   }
 
   async findById(req, res) {
-    const registro = await item.findById(req, params.id);
+    const registro = await item.findById(req.params.id);
     if (registro) {
-      return res.json(registro);
+      return res.status(200).json(registro);
     } else {
       return res.status(404).send("Not found");
     }
