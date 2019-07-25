@@ -7,8 +7,11 @@ const osSchema = new Schema(
     dataSaida: Date,
     valorTotal: Number,
     cliente: {
-      type: Schema.Types.ObjectId,
-      ref: "clientes"
+      id: {
+        type: Schema.Types.ObjectId,
+        ref: "cliente"
+      },
+      nome: String
     },
     itens: {
       type: Schema.Types.ObjectId,
