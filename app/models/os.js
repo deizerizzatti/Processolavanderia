@@ -13,10 +13,14 @@ const osSchema = new Schema(
       },
       nome: String
     },
-    itens: {
-      type: Schema.Types.ObjectId,
-      ref: "itens"
-    }
+    itens: [
+      {
+        item: {
+          type: Schema.Types.ObjectId,
+          ref: "item"
+        }
+      }
+    ]
   },
   { timestamps: true }
 );
